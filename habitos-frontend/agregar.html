@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agregar Hábito</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-white container py-3">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="/assets/habitos_logo.webp" alt="Logo" class="logo-img me-2" width="75" height="75"/>
+
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mt-3 mt-md-0">
+          <li class="nav-item">
+            <a class="text-dark me-3 mb-2" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-dark me-3 mb-2" href="listado.html">Mis Hábitos</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-dark me-3 mb-2" href="agregar.html">Agregar</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-dark me-3 mb-2" href="#">Estadísticas</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-dark me-3 mb-2" href="#">Perfil</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Sección principal -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg border-0 rounded-4 p-4"
+          style="background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);">
+          <h2 class="text-center mb-4 fw-bold" style="color: #ff4b2b; font-family: 'Poppins', sans-serif;">
+            <i class="bi bi-rocket-takeoff me-2"></i>Nuevo Hábito
+          </h2>
+          <form id="form-nuevo-habito">
+            <div class="mb-3 position-relative">
+              <label for="nombreHabito" class="form-label fw-semibold">Nombre del hábito</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0"><i
+                    class="bi bi-check2-square text-primary"></i></span>
+                <input type="text" class="form-control border-start-0" id="nombreHabito"
+                  placeholder="Ej: Meditar 10 minutos" required>
+              </div>
+            </div>
+
+            <div class="mb-3 position-relative">
+              <label for="descripcionHabito" class="form-label fw-semibold">Descripción</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-card-text text-primary"></i></span>
+                <textarea class="form-control border-start-0" id="descripcionHabito" rows="3"
+                  placeholder="¿En qué consiste este hábito?"></textarea>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="frecuencia" class="form-label fw-semibold">Frecuencia</label>
+              <select class="form-select" id="frecuencia" required>
+                <option selected disabled>Selecciona una opción</option>
+                <option value="Diario">Diario</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Mensual">Mensual</option>
+              </select>
+            </div>
+            <div class="mb-3 position-relative">
+              <label for="metaHabito" class="form-label fw-semibold">Meta</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-flag text-primary"></i></span>
+                <input type="number" class="form-control border-start-0" id="metaHabito" placeholder="Ej: 20 sesiones"
+                  min="1" required>
+              </div>
+            </div>
+
+
+            <div class="text-end">
+              <button type="submit" class="btn btn-add px-4">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer text-white">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h4 class="fw-bold">Hábitos+</h4>
+          <p class="text-white-50">Transformá tu vida un hábito a la vez. Esta app fue creada con pasión y propósito.
+          </p>
+          <div class="social-icons mt-3">
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5 class="fw-bold">Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Inicio</a></li>
+            <li><a href="#funcionalidades" class="footer-link">Funcionalidades</a></li>
+            <li><a href="#" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center py-1">
+      <small class="text-white-50">© 2025 Hábitos+. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+  <script type="module" src="/src/agregar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

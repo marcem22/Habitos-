@@ -1,0 +1,38 @@
+@Integrador_HostAddress = http://localhost:5000
+
+### Obtener todos los hábitos
+GET {{Integrador_HostAddress}}/api/habitos
+Accept: application/json
+
+### Obtener hábito por ID
+GET {{Integrador_HostAddress}}/api/habitos/1
+Accept: application/json
+
+### Crear nuevo hábito
+POST {{Integrador_HostAddress}}/api/habitos
+Content-Type: application/json
+
+{
+    "nombre": "Meditar 10 minutos",
+    "categoria": "Bienestar",
+    "frecuencia": "Diaria",
+    "descripcion": "Reducir estrés y mejorar concentración",
+    "meta": 30,
+    "progreso": 0
+}
+
+### Actualizar hábito
+PUT {{Integrador_HostAddress}}/api/habitos/1
+Content-Type: application/json
+
+{
+    "nombre": "Beber 3 litros de agua",
+    "categoria": "Salud", 
+    "frecuencia": "Diaria",
+    "descripcion": "Mantener hidratación óptima",
+    "meta": 30,
+    "progreso": 50
+}
+
+### Eliminar hábito
+DELETE {{Integrador_HostAddress}}/api/habitos/3
